@@ -24,7 +24,7 @@ function makeGrid(row=16, col=16) {
             cellDiv.style['padding']='0';
             cellDiv.style['margin']='0';
             cellDiv.style['flex']='1 1 auto';
-            //flex-shrink
+            
             container.appendChild(cellDiv);
         }
     }
