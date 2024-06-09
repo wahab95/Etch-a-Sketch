@@ -9,8 +9,8 @@ function makeGrid(row=16, col=16) {
     container.style['height']=`${22*row}px`;
     container.style['flex-wrap']='wrap';
     container.style['gap']='0px';
-    container.style['padding']='0';
-    container.style['margin']='0';
+    container.style['padding']='0px';
+    container.style['margin']='0px';
     container.style['justify-content']='space-evenly';
     container.style['align-content']='center';
 
