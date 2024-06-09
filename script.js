@@ -14,19 +14,21 @@ function makeGrid(row=16, col=16) {
     container.style['justify-content']='space-evenly';
     container.style['align-content']='center';
 
-    for (let i = 0; i < row; i++) {
-        for (let k = 0; k < col; k++) {
+    for (let i = 1; i <= row; i++) {
+        for (let k = 1; k <= col; k++) {
             const cellDiv = document.createElement('div'); // Create a new div for each cell
-            cellDiv.setAttribute('id',`${i}${k}`);
+            cellDiv.setAttribute('id',`${i}-${k}`);
             cellDiv.style['border']='1px solid black';
             cellDiv.style['width']='20px';
             cellDiv.style['height']='20px';
             cellDiv.style['padding']='0';
             cellDiv.style['margin']='0';
+            cellDiv.style['flex']='1 1 auto';
+            //flex-shrink
             container.appendChild(cellDiv);
         }
     }
 }
 
 //      ::::::::Actions::::::::
-makeGrid();
+makeGrid(20,20);
