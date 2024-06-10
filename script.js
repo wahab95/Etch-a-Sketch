@@ -1,6 +1,6 @@
 //      ::::::::Vars::::::::
 const container = document.querySelector('.container');
-
+const btn = document.getElementById('btn');
 
 //      ::::::::Functions & Methods::::::::
 function makeGrid(row=16, col=16) {
@@ -24,14 +24,25 @@ function makeGrid(row=16, col=16) {
             cellDiv.style['padding']='0';
             cellDiv.style['margin']='0';
             cellDiv.style['flex']='1 1 auto';
-            
+            cellDiv.setAttribute('class','new')
+
             container.appendChild(cellDiv);
+            cellDiv.addEventListener('mouseover',function(){
+                cellDiv.style['background-color']=`RGB(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+            })
+            
         }
     }
-}
-function hoverOver(){
+};
 
-}
 
 //      ::::::::Actions::::::::
 makeGrid(20,20);
+
+btn.addEventListener('click',function(){
+    const es = document.querySelectorAll('.new');
+    es.forEach(e => {
+        e.style['background-color']='';
+    });
+
+});
