@@ -15,3 +15,8 @@
 #btn:hover{
     background-color: hsl(108, 68%, 32%);   
 }
+.para::first-letter{
+    font-size: 5em;
+    color: hsl(108, 68%, 22%);
+
+}
