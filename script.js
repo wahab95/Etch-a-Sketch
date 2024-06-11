@@ -1,6 +1,7 @@
 //      ::::::::Vars::::::::
 const container = document.querySelector('.container');
 const btn = document.getElementById('btn');
+const audio = document.getElementById('fart');
 
 //      ::::::::Functions & Methods::::::::
 function makeGrid(row=16, col=16) {
@@ -13,7 +14,7 @@ function makeGrid(row=16, col=16) {
     container.style['margin-top']='1em';
     container.style['justify-content']='space-evenly';
     container.style['align-content']='center';
-
+    
     for (let i = 1; i <= row; i++) {
         for (let k = 1; k <= col; k++) {
             const cellDiv = document.createElement('div'); // Create a new div for each cell
@@ -44,5 +45,5 @@ btn.addEventListener('click',function(){
     es.forEach(e => {
         e.style['background-color']='';
     });
-
+    audio.play();
 });
